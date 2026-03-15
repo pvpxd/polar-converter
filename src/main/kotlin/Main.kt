@@ -11,7 +11,7 @@ import java.nio.file.Files
 import java.util.concurrent.Callable
 import kotlin.system.exitProcess
 
-@Command(name = "polarconvert", aliases = ["polarc", "polar"], description = ["Converts a world folder into a polar file."])
+@Command(name = "polarconverter", aliases = ["polarc", "polar"], description = ["Converts a world folder into a polar file."])
 class PolarConverter : Callable<Int> {
     @Option(names = ["-i", "--input"], required = true, description = ["Select the input folder you want to convert into a polar file. Remember that the folder needs to contain AT LEAST a /region folder."])
     lateinit var input: File
