@@ -30,12 +30,8 @@ class PolarConverter : Callable<Int> {
             error("The specified folder input does not exist.")
         }
 
-        if (!Files.exists(inputPath)) {
+        if (!Files.isDirectory(inputPath)) {
             error("The specified folder input is not a folder.")
-        }
-
-        if (!Files.isReadable(inputPath)) {
-            error("The specified folder input is not readable.")
         }
 
         if (!output.exists()) {
