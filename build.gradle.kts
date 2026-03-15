@@ -24,15 +24,21 @@ kotlin {
 }
 
 tasks {
-    jar {
-        manifest {
-            attributes["Main-Class"] = "dev.akkih.MainKt"
+    shadowJar {
+        archiveClassifier.set("")
+        manifest { attributes["Main-Class"] = "dev.akkih.MainKt" }
+
+        mergeServiceFiles()
+
+        minimize {
+            exclude(dependency("net.minestom:minestom:.*"))
+            exclude(dependency("net.kyori:.*"))
+            exclude(dependency("org.slf4j:.*"))
         }
     }
 
-    shadowJar {
-//        minimize()
-        archiveClassifier.set("")
+    build {
+        dependsOn(shadowJar)
     }
 }
 
