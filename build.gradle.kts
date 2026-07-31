@@ -13,8 +13,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("net.minestom:minestom:2026.03.03-1.21.11")
-    implementation("dev.hollowcube:polar:1.15.0")
+    implementation("net.minestom:minestom:2026.07.22-26.2")
+    implementation("dev.hollowcube:polar:1.16.0")
     implementation("info.picocli:picocli:4.7.7")
     kapt("info.picocli:picocli-codegen:4.7.7")
 }
